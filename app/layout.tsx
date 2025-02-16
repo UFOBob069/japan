@@ -16,11 +16,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" data-gramm="false" data-gramm_editor="false" data-enable-grammarly="false">
-      <head>
-        <meta name="grammarly-disable" content="true" />
-      </head>
-      <body className={inter.className} data-gramm="false">
+    <html lang="en">
+      <body className={inter.className}>
         <Header />
         {children}
         <Footer />

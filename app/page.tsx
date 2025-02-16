@@ -1,6 +1,4 @@
-'use client'
-import React from 'react'
-import ExpediaWidget from './_components/ExpediaWidget'
+"use client";
 
 export default function Home() {
   return (
@@ -14,9 +12,14 @@ export default function Home() {
             Find Your Perfect Stay in Japan
           </h1>
           <div className="w-full max-w-4xl bg-neutral-white p-6 rounded-lg shadow-lg">
-            <div className="flex justify-center">
-              <ExpediaWidget />
-            </div>
+            {/* Simple Expedia Embed */}
+            <div
+              className="flex justify-center"
+              suppressHydrationWarning
+              dangerouslySetInnerHTML={{
+                __html: `\n                  <!-- Expedia's recommended snippet BEGIN -->\n                  <div class=\"eg-widget\"\n                       data-widget=\"search\"\n                       data-program=\"jp-expedia\"\n                       data-lobs=\"stays\"\n                       data-network=\"pz\"\n                       data-camref=\"1100ltWgV\">\n                  </div>\n                  <script\n                    class=\"eg-widgets-script\"\n                    src=\"https://affiliates.expediagroup.com/products/widgets/assets/eg-widgets.js\"\n                    async\n                  ></script>\n                  <!-- Expedia's recommended snippet END -->\n                `,
+              }}
+            />
           </div>
         </div>
       </section>
@@ -25,7 +28,6 @@ export default function Home() {
       <section className="py-16 px-4 bg-neutral-white">
         <h2 className="text-3xl font-bold text-center mb-12 text-primary">Featured Properties</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          {/* Property Cards */}
           {[1, 2, 3].map((i) => (
             <div key={i} className="rounded-lg overflow-hidden shadow-lg bg-neutral-white">
               <div className="h-48 bg-neutral"></div>
@@ -50,13 +52,13 @@ export default function Home() {
           <div className="prose lg:prose-xl mx-auto">
             <p className="text-primary/80">
               Discover the authentic way to experience Japan through Minpaku stays.
-              Whether you&apos;re looking for a traditional machiya in Kyoto or a modern
-              apartment in Tokyo, we&apos;ll help you find the perfect accommodation for
+              Whether you\u2019re looking for a traditional machiya in Kyoto or a modern
+              apartment in Tokyo, we\u2019ll help you find the perfect accommodation for
               your Japanese adventure.
             </p>
           </div>
         </div>
       </section>
     </main>
-  )
-} 
+  );
+}
