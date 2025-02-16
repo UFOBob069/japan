@@ -17,6 +17,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link 
+          rel="stylesheet" 
+          href="https://affiliates.expediagroup.com/products/widgets/assets/eg-widgets.css"
+        />
+      </head>
       <body className={inter.className}>
         <Header />
         {children}
