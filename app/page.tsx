@@ -50,8 +50,8 @@ export default function Home() {
           <div className="prose lg:prose-xl mx-auto">
             <p className="text-primary/80">
               Discover the authentic way to experience Japan through Minpaku stays.
-              Whether you're looking for a traditional machiya in Kyoto or a modern
-              apartment in Tokyo, we'll help you find the perfect accommodation for
+              Whether you&apos;re looking for a traditional machiya in Kyoto or a modern
+              apartment in Tokyo, we&apos;ll help you find the perfect accommodation for
               your Japanese adventure.
             </p>
           </div>
